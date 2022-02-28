@@ -1,0 +1,7 @@
+{
+  "name": "ionic-krao-tabs",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
