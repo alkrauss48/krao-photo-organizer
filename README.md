@@ -5,6 +5,8 @@ Built by [alkrauss48](https://github.com/alkrauss48),
 [laylark](https://github.com/laylark),
 and [genechao](https://github.com/genechao)
 
+## [Ionic Docs](https://ionicframework.com/docs/components)
+
 ## Getting Started
 ```
 git clone https://github.com/alkrauss48/krao-photo-organizer.git
