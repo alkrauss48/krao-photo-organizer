@@ -6,7 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+  counter = 0;
 
   constructor() {}
 
+  buttonClicked() {
+    console.log('clicked');
+    this.counter = this.counter + 1;
+  }
 }

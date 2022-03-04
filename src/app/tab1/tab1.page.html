@@ -13,5 +13,14 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- <app&#45;explore&#45;container name="Tab 1 page foo"></app&#45;explore&#45;container> -->
+  <ion-button
+    color="success"
+    shape="round"
+    expand="full"
+    (click)="buttonClicked()"
+  >Default</ion-button>
+  <ion-text>
+    Clicked {{ counter }} times
+  </ion-text>
 </ion-content>
