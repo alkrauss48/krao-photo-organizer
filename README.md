@@ -34,11 +34,17 @@ Checking git status
 git status
 ```
 
+Checking out a branch
+```
+git branch <branch name>
+git checkout <branch name>
+```
+
 When pushing code
 ```
 git add --all
 git commit -m "your message"
-git push origin master
+git push origin master (or <branch name>)
 ```
 
 When pulling code

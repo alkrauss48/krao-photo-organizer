@@ -15,11 +15,19 @@
 
   <!-- <app&#45;explore&#45;container name="Tab 1 page foo"></app&#45;explore&#45;container> -->
   <ion-button
+    *ngIf="showButton"
     color="success"
     shape="round"
     expand="full"
     (click)="buttonClicked()"
-  >Submit</ion-button>
+    >{{ buttonText }}</ion-button>
+  <ion-button
+    *ngIf="!showButton"
+    color="danger"
+    shape="round"
+    expand="full"
+    (click)="buttonClicked()"
+  >{{ buttonText }}</ion-button>
   <ion-text>
     Clicked {{ activeLetter }} times
   </ion-text>

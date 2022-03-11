@@ -8,8 +8,10 @@ import { ToastController } from '@ionic/angular';
 })
 export class Tab1Page {
   letters = 'laylaisawesome';
-  counter = 0;
   activeLetter = '';
+  counter: number = 0;
+  showButton: boolean = false;
+  buttonText: string = 'button text';
 
   constructor(public toastController: ToastController) {}
 
