@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-  counter = 0;
+  counter: number = 0;
+  showButton: boolean = false;
+  buttonText: string = 'button text';
 
   constructor() {}
 
