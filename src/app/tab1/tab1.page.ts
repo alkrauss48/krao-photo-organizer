@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ToastController } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -13,7 +14,24 @@ export class Tab1Page {
   showButton: boolean = false;
   buttonText: string = 'button text';
 
-  constructor(public toastController: ToastController) {}
+  constructor(public toastController: ToastController, public alertController: AlertController) {}
+
+  async presentAlert(header: string, subheader: string = "", message: string) {
+    const alert = await this.alertController.create({
+      header: header,
+      subHeader: subheader,
+      message: message,
+      buttons: ['OK']
+    });
+    await alert.present();
+  }
+
+  ionViewDidEnter() {
+    const today = new Date();
+    if (today.getMonth()+1 == 3 && today.getDate() == 12) {
+      this.presentAlert("3/12", "", "Happy belated birthday, Layla!");
+    }
+  }
 
   buttonClicked() {
     this.activeLetter = this.letters.substring(this.counter,(this.counter + 1));
