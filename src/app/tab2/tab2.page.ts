@@ -6,14 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-  photos: string[] = ["assets/bidoof1.jpg", "assets/bidoof2.jpg"];
+  // photos: string[] = ["assets/bidoof1.jpg", "assets/bidoof2.jpg"];
+  photos: any = [{
+    path: "assets/bidoof1.jpg",
+    keep: false,
+  }, {
+    path: "assets/bidoof2.jpg",
+    keep: false,
+  }];
   photoActive: number = 0;
-  photoSrc: string = this.photos[this.photoActive];
+  photo: any = this.photos[this.photoActive];
+  // photoKeep: boolean = false;
 
   constructor() {}
 
   photoClicked() {
     this.photoActive = (this.photoActive == 0 ? 1 : 0);
-    this.photoSrc = this.photos[this.photoActive];
+    this.photo = this.photos[this.photoActive];
+  }
+
+  keep() {
+    this.photo.keep = !this.photo.keep;
   }
 }
