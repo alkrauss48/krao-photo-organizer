@@ -1,0 +1,6 @@
+ion-img {
+    border: 1em solid transparent;
+    &.selected {
+        border: 1em solid green;
+    }
+}
