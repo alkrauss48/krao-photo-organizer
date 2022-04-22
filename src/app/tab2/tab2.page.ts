@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Camera } from '@capacitor/camera';
 
 @Component({
   selector: 'app-tab2',
@@ -27,5 +28,14 @@ export class Tab2Page {
 
   keep() {
     this.photo.keep = !this.photo.keep;
+  }
+
+  async openPhotos() {
+    const { photos }  = await Camera.pickImages({
+      quality: 100, // 0 - 100
+      presentationStyle: 'popover', // 'fullscreen' | 'popover'
+      limit: 4 // 0: unlimited
+    });
+    return photos;
   }
 }
