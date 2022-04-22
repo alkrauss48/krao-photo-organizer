@@ -22,7 +22,10 @@ export class Tab2Page {
   constructor() {}
 
   photoClicked() {
-    this.photoActive = (this.photoActive == 0 ? 1 : 0);
+    this.photoActive++;
+    if (this.photoActive >= this.photos.length) {
+      this.photoActive = 0;
+    };
     this.photo = this.photos[this.photoActive];
   }
 
@@ -35,6 +38,12 @@ export class Tab2Page {
       quality: 100, // 0 - 100
       presentationStyle: 'popover', // 'fullscreen' | 'popover'
       limit: 4 // 0: unlimited
+    });
+    photos.forEach((photo) => {
+      this.photos.push({
+        path: photo.webPath,
+        keep: false,
+      });
     });
     return photos;
   }
