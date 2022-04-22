@@ -40,7 +40,6 @@ export class Tab2Page {
       limit: 4 // 0: unlimited
     });
     photos.forEach((photo) => {
-      console.log(photo.webPath);
       this.photos.push({
         path: photo.webPath,
         keep: false,
